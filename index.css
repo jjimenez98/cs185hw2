@@ -1,0 +1,155 @@
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+  }
+  
+  /*Navigation*/
+  
+  .navigation{
+    display:flex;
+    flex-direction: row;
+    justify-content:flex-start;
+    background-color: rgba(0,0,0,80%);
+  }
+  
+  .navigation-link{
+    font-size: 1.6rem;
+    margin-left:1rem;
+    text-decoration:none;
+    color:white;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 14px 10px;
+  }
+  
+  
+  /*Grid*/
+  .row{
+    max-width: 114rem;
+    margin: 0 auto;
+  }
+  
+  .row:not(:last-child){
+    margin-bottom: 8rem;
+  }
+  
+  .col-1-of-3{
+    float:left;
+    width: calc((100% - 2 * 6rem)/3);
+  }
+  
+  .col-1-of-3:not(:last-child){
+    margin-right: 6rem;
+  }
+
+.container{
+    text-align: center;
+}
+  
+  /*Text*/
+  
+  .text{
+    float:left;
+    margin-top: 2rem;
+    font-family: 'Times New Roman', Times, serif;
+    
+  }
+  
+  .text-first{
+    padding: 2rem 2rem;
+  }
+  
+  
+  .text-first-box-label{
+    float:left;
+  }
+  
+  .text-label-avengers{
+    font-size: 1.4rem;
+  }
+  .text-label-darkknight{
+    font-size: 1.4rem;
+  }
+  .text-label-tenet{
+    font-size: 1.4rem;
+  }
+  
+  .text-second-header{
+    width:100%;
+    display:flex;
+    padding: 0 2rem;
+  }
+  .text-second-radio{
+    width:100%;
+    padding: 0 2rem;
+  }
+  .text-second-radio-input{
+    display:flex;
+  }
+  
+  .text-done{
+    display:flex;
+    padding: 2rem 2rem;
+    width:100%;
+    font-size: 1.4rem;
+  
+  }
+  
+  
+  .firstname{
+    font-size: 1.4rem;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  .lastname{
+    font-size: 1.4rem;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  .avengers{
+    font-size: 1.4rem;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  .darknight{
+    font-size:1.4rem;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  .tenet{
+    font-size:1.6rem;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  .submit{
+    font-size:1.3rem;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  
+  /*Table*/
+  
+  .table{
+    margin: 0 auto;
+    width:50%;
+  }
+  
+  table,
+  td {
+      border: 1px solid #333;
+  }
+  
+  thead,
+  tfoot {
+    border: 1px solid #333;
+  }
+  
