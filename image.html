@@ -5,39 +5,103 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="index.css" />
+    <script src="app.js"></script>
   </head>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 20px;
+      height: 130vh;
+    }
+
+    #myBtn {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      right: 30px;
+      z-index: 99;
+      font-size: 18px;
+      border: none;
+      outline: none;
+      background-color: red;
+      color: white;
+      cursor: pointer;
+      padding: 15px;
+      border-radius: 4px;
+    }
+
+    #myBtn:hover {
+      background-color: #555;
+    }
+  </style>
   <body>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
     <div class="container">
-      <nav class="navigation">
+      <nav id="navigation" class="navigation">
         <a href="text.html" class="navigation-link"> Text </a>
-        <a href="image.html" class="navigation-link"> Image </a>
+        <a href="image.html" class="navigation-link active"> Image </a>
         <a href="video.html" class="navigation-link"> Video </a>
         <a href="table.html" class="navigation-link"> Table </a>
       </nav>
       <section class="image">
-        <div class="row">
-          <div class="col-1-of-3">
-            <img src="download.jpeg" />
-          </div>
-          <div class="col-1-of-3">
-            <img src="download1.jpeg" />
-          </div>
-          <div class="col-1-of-3">
-            <img src="download2.jpeg" />
+        <div id="popup" class="popup">
+          <div class="popup-content">
+            <img id="popup-content-image" class="popup-content-images" />
+            <button id="popup-content-close" class="popup-content-close">
+              Close
+            </button>
           </div>
         </div>
         <div class="row">
           <div class="col-1-of-3">
-            <img src="download3.jpeg" />
+            <img id="images" class="images" src="download.jpeg" />
           </div>
           <div class="col-1-of-3">
-            <img src="download4.jpeg" />
+            <img id="images2" class="images" src="download1.jpeg" />
           </div>
           <div class="col-1-of-3">
-            <img src="download5.jpeg" />
+            <img id="images3" class="images" src="download2.jpeg" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-1-of-3">
+            <img id="images4" class="images" src="download3.jpeg" />
+          </div>
+          <div class="col-1-of-3">
+            <img id="images5" class="images" src="download4.jpeg" />
+          </div>
+          <div class="col-1-of-3">
+            <img id="images6" class="images" src="download5.jpeg" />
           </div>
         </div>
       </section>
     </div>
+    <script src="app.js"></script>
+    <script>
+      //Get the button
+      var mybutton = document.getElementById("myBtn");
+
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function () {
+        scrollFunction();
+      };
+
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 20 ||
+          document.documentElement.scrollTop > 20
+        ) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+    </script>
   </body>
 </html>
