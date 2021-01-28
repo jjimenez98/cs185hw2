@@ -143,7 +143,7 @@ body {
   .popup-content{
     width:60%;
     background-color: transparent;
-    height:40rem;
+ 
     box-shadow: 0 2rem 4rem rgba(#000, .2);
     position:absolute;
     top: 50%;
