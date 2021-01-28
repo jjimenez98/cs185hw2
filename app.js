@@ -92,12 +92,43 @@ images6.addEventListener("click", function () {
   popup.className = popup.className.replace("popup", "");
   popup.className += "popup1";
 }); //
-
-var close_btn = document.getElementById("popup-content-close");
+var images7 = document.getElementById("images7");
 console.log("popup");
-console.log(images);
+console.log(images7);
 
-close_btn.addEventListener("click", function () {
+images7.addEventListener("click", function () {
+  console.log("images click");
+  var popup = document.getElementById("popup");
+  document.getElementById("popup-content-image").src = "download2.jpeg";
+  popup.className = popup.className.replace("popup", "");
+  popup.className += "popup1";
+}); //
+var images8 = document.getElementById("images8");
+console.log("popup");
+console.log(images8);
+
+images8.addEventListener("click", function () {
+  console.log("images click");
+  var popup = document.getElementById("popup");
+  document.getElementById("popup-content-image").src = "download1.jpeg";
+  popup.className = popup.className.replace("popup", "");
+  popup.className += "popup1";
+}); //
+
+// var close_btn = document.getElementById("popup-content-close");
+// console.log("popup");
+// console.log(images);
+
+// close_btn.addEventListener("click", function () {
+//   console.log("images click");
+//   var popup = document.getElementById("popup");
+//   popup.className = popup.className.replace("popup1", "");
+//   popup.className += "popup";
+// });
+
+var close_btn1 = document.getElementById("popup-content-click");
+
+close_btn1.addEventListener("click", function () {
   console.log("images click");
   var popup = document.getElementById("popup");
   popup.className = popup.className.replace("popup1", "");
