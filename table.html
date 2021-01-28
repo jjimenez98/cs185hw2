@@ -5,13 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="index.css" />
     <title>Document</title>
+    <script src="app.js"></script>
   </head>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 20px;
+      height: 130vh;
+    }
+
+    #myBtn {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      right: 30px;
+      z-index: 99;
+      font-size: 18px;
+      border: none;
+      outline: none;
+      background-color: red;
+      color: white;
+      cursor: pointer;
+      padding: 15px;
+      border-radius: 4px;
+    }
+
+    #myBtn:hover {
+      background-color: #555;
+    }
+  </style>
   <body>
-    <nav class="navigation">
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <nav id="navigation" class="navigation">
       <a href="text.html" class="navigation-link"> Text </a>
       <a href="image.html" class="navigation-link"> Image </a>
       <a href="video.html" class="navigation-link"> Video </a>
-      <a href="table.html" class="navigation-link"> Table </a>
+      <a href="table.html" class="navigation-link active"> Table </a>
+      <a href="email.html" class="navigation-link"> Email </a>
     </nav>
     <section class="table">
       <div>
@@ -67,5 +97,32 @@
         </table>
       </div>
     </section>
+    <script src="app.js"></script>
+    <script>
+      //Get the button
+      var mybutton = document.getElementById("myBtn");
+
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function () {
+        scrollFunction();
+      };
+
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 20 ||
+          document.documentElement.scrollTop > 20
+        ) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+    </script>
   </body>
 </html>
