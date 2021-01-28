@@ -75,6 +75,7 @@ body {
   }
   .row1{
     margin-right: 6rem;
+    width:60rem;
   }
 
 .container{
@@ -171,11 +172,16 @@ body {
 }
 
   /*Text*/
+
+  .form-text{
+    display:inline-block;
+    margin: 0 auto;
+  }
   
   .text{
-    float:left;
-    margin-top: 2rem;
+    margin: 0 auto;
     font-family: 'Times New Roman', Times, serif;
+    display: flex;
     
   }
   
